@@ -6,10 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './dashboard/auth.guard';
 
 @NgModule({
-  imports:      [ BrowserModule, ReactiveFormsModule ],
-  declarations: [ AppComponent, HelloComponent, LoginComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule],
+  declarations: [AppComponent, HelloComponent, LoginComponent],
+  bootstrap: [AppComponent],
+  providers: [AuthGuard],
 })
-export class AppModule { }
+export class AppModule {}
