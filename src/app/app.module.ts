@@ -7,10 +7,16 @@ import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './dashboard/auth.guard';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule],
-  declarations: [AppComponent, HelloComponent, LoginComponent],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    LoginComponent,
+    DashboardComponent,
+  ],
   bootstrap: [AppComponent],
   providers: [AuthGuard],
 })

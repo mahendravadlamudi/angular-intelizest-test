@@ -1,2 +1,20 @@
-<h1>Welcome To Dashboard</h1>
-<button type="button" (click)="logout()" class="btn btn-danger">Logout</button>
+<h1>Hi {{ userService?.currentuser?.username }}, Welcome To Dashboard</h1>
+
+<div class="row m-0">
+  <div class="col-12 p-1">
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let user of users; let i = index; let odd = odd"
+      >
+        {{ user?.username }}
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div>
+  <button type="button" (click)="logout()" class="btn btn-danger">
+    Logout
+  </button>
+</div>

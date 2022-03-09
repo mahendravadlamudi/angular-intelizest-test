@@ -1,4 +1,4 @@
-import { Component, OnInit, VERSION } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../user.service';
 
@@ -8,9 +8,13 @@ import { UserService } from '../user.service';
   styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent implements OnInit {
-  constructor(private userService: UserService, private router: Router) {}
+  users: any[];
+  constructor(public userService: UserService, private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.userService.users);
+    this.users = this.userService.users;
+  }
 
   logout() {
     this.userService.currentuser = null;

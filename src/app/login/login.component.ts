@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit {
       username: new FormControl('', [Validators.required]),
       pwdinfo: new FormControl('', [Validators.required]),
     });
+    alert();
   }
 
   resetForm() {
